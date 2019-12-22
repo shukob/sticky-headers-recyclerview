@@ -1,3 +1,11 @@
+buildscript{
+    repositories {
+        jcenter()
+        mavenCentral()
+        google()
+    }
+}
+
 apply plugin: 'com.android.library'
 
 android {
@@ -17,7 +25,11 @@ android {
 }
 
 dependencies {
-    compile "com.android.support:recyclerview-v7:${rootProject.supportLibsVersion}"
+    implementation "androidx.core:core:1.1.0"
+    implementation "androidx.recyclerview:recyclerview:1.1.0"
+    implementation "com.google.android.material:material:1.0.0"
+
+
 }
 
 apply from: 'gradle-maven-push.gradle'

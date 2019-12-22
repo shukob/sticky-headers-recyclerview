@@ -1,3 +1,10 @@
+buildscript{
+    repositories {
+        jcenter()
+        mavenCentral()
+        google()
+    }
+}
 apply plugin: 'com.android.application'
 
 
@@ -20,6 +27,7 @@ android {
 }
 
 dependencies {
-    compile project(':library')
-    compile "com.android.support:appcompat-v7:${rootProject.supportLibsVersion}"
+    implementation project(':library')
+    implementation "androidx.recyclerview:recyclerview:1.1.0"
+    implementation "androidx.appcompat:appcompat:1.1.0"
 }
